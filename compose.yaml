@@ -1,0 +1,14 @@
+services:
+  postgres:
+    container_name: nfestream
+    hostname: nfestream
+    image: postgres
+    restart: always
+    volumes:
+      - ./local/path:/container/path
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: nfestream
+    ports:
+      - 5432:5432
