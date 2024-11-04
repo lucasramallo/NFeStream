@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.File;
 import java.io.InputStream;
 
 @SpringBootApplication
@@ -37,7 +36,13 @@ class StartupRunner implements CommandLineRunner {
 			}
 			NfeJAXBModel nfeJAXBModel = (NfeJAXBModel) unmarshaller.unmarshal(inputStream);
 
-			System.out.println("codigo de serie: " + nfeJAXBModel.getInformacaoNFe().getEmitente().getXNome());
+			System.out.println("cnpjCpf: " + nfeJAXBModel.getInfNFe().getDest().getCNPJ());
+			System.out.println("nome: " + nfeJAXBModel.getInfNFe().getDest().getXNome());
+
+			System.out.println("item: " + nfeJAXBModel.getInfNFe().getDet().getProd().getXProd());
+			System.out.println("item: " + nfeJAXBModel.getInfNFe().getDet().getImposto().getICMS().getICMS00().getCST());
+
+
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
