@@ -8,6 +8,8 @@
 
 package com.github.lucasramallo.nfestream.core.model;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.bind.annotation.*;
@@ -1672,6 +1674,7 @@ public class NfeJAXBModel {
                     "xPais",
                     "fone"
             })
+            @Data
             public static class EnderDest {
 
                 @XmlElement(required = true)
@@ -2327,6 +2330,7 @@ public class NfeJAXBModel {
                     "pis",
                     "cofins"
             })
+            @Data
             public static class Imposto {
 
                 @XmlElement(name = "ICMS", required = true)
@@ -2471,6 +2475,8 @@ public class NfeJAXBModel {
                 @XmlType(name = "", propOrder = {
                         "cofinsAliq"
                 })
+
+                @Data
                 public static class COFINS {
 
                     @XmlElement(name = "COFINSAliq", required = true)
@@ -2680,6 +2686,7 @@ public class NfeJAXBModel {
                 @XmlType(name = "", propOrder = {
                         "icms00"
                 })
+                @Data
                 public static class ICMS {
 
                     @XmlElement(name = "ICMS00", required = true)
@@ -2942,6 +2949,8 @@ public class NfeJAXBModel {
                         "cEnq",
                         "ipint"
                 })
+
+                @Data
                 public static class IPI {
 
                     @XmlElement(required = true)
@@ -3091,6 +3100,8 @@ public class NfeJAXBModel {
                 @XmlType(name = "", propOrder = {
                         "pisAliq"
                 })
+
+                @Data
                 public static class PIS {
 
                     @XmlElement(name = "PISAliq", required = true)
@@ -4053,6 +4064,8 @@ public class NfeJAXBModel {
                     "xPais",
                     "fone"
             })
+
+            @Data
             public static class EnderEmit {
 
                 @XmlElement(required = true)
