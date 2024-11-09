@@ -13,7 +13,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 public class NfestreamApplication {
@@ -35,7 +34,7 @@ class StartupRunner implements CommandLineRunner {
 			Unmarshaller unmarshaller = context.createUnmarshaller();
 
 			InputStream inputStream = getClass().getClassLoader()
-					.getResourceAsStream("static/35101158716523000119550010000000011003000000-nfe.xml");
+					.getResourceAsStream("static/fake_nfe.xml");
 
 			if (inputStream == null) {
 				System.out.println("acho n patrao");

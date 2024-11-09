@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "item_nfe")
@@ -22,9 +23,9 @@ public class ItemNfe {
     @JoinColumn(name = "nfe_id", nullable = false)
     private Nfe nfe;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "produto_servico_id")
-    private ProdutoServico produtoServico;
+    private ArrayList<ProdutoServico> produtoServico;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal quantidade;

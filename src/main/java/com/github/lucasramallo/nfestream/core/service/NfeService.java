@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 public class NfeService {
     public void excecute() {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("static/35101158716523000119550010000000011003000000-nfe.xml");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("static/fake_nfe.xml");
         if (inputStream == null) {
             System.out.println("acho n patrao");
         }

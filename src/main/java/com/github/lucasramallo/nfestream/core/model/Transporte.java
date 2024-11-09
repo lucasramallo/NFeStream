@@ -24,8 +24,4 @@ public class Transporte {
 
     @Column(length = 14)
     private String transportadoraCnpj;
-
-    @ManyToOne
-    @JoinColumn(name = "nfe_id", nullable = false)
-    private Nfe nfe;
 }

@@ -39,13 +39,17 @@ public class Nfe {
     @Column(precision = 10, scale = 2)
     private BigDecimal valorTotal;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "emitente_id", nullable = false)
     private Emitente emitente;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "destinatario_id", nullable = false)
     private Destinatario destinatario;
+
+    @OneToOne
+    @JoinColumn(name = "transporte_id", nullable = false)
+    private Transporte transporte;
 
     @Column(length = 255)
     private String caminhoPdf;
