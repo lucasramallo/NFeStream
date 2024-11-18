@@ -32,7 +32,7 @@ public abstract class JaxbToImposto{
 
         return impostos;
     }
-    
+
     private static void mapFields(Object obj, int indentLevel) {
         if (obj == null || isSystemClass(obj.getClass())) {
             return;
