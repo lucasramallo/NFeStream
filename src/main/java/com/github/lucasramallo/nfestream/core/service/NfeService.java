@@ -18,6 +18,7 @@ public class NfeService {
         }
 
         NfeJAXBModel nfeModel = convertXmlToModel(inputStream);
+        
         ArrayList<Imposto> impostos = JaxbToImposto.execute(nfeModel.getInfNFe().getDet().getImposto());
     }
 
