@@ -1,26 +1,25 @@
 package com.github.lucasramallo.nfestream.core.service;
 
-import com.github.lucasramallo.nfestream.core.model.NfeJAXBModel;
+import com.github.lucasramallo.nfestream.core.mappers.JaxbToImposto;
+import com.github.lucasramallo.nfestream.core.entity.Imposto;
+import com.github.lucasramallo.nfestream.core.entity.NfeJAXBModel;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class NfeService {
     public void excecute() {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("static/fake_nfe.xml");
         if (inputStream == null) {
-            System.out.println("acho n patrao");
+            throw new RuntimeException("Arquivo XML não encontrado!");
         }
 
-        NfeJAXBModel model = convertXmlToModel(inputStream);
+        NfeJAXBModel nfeModel = convertXmlToModel(inputStream);
 
-//        System.out.println("cnpjCpf: " + model.getInformacaoNFe().getDestinatario().getCNPJ());
-//        System.out.println("nome: " + model.getInformacaoNFe().getDestinatario().getXNome());
-//        System.out.println("endereco: " + model.getInformacaoNFe().getDestinatario().getEnderDest());
-//        System.out.println("telefone: " + model.getInformacaoNFe().getDestinatario().getIE());
-//        System.out.println("email: " + model.getInformacaoNFe().getDestinatario().getEmail());
+        ArrayList<Imposto> impostos = JaxbToImposto.execute(nfeModel.getInfNFe().getDet().getImposto());
     }
 
     private NfeJAXBModel convertXmlToModel(InputStream inputStream) {
@@ -30,7 +29,7 @@ public class NfeService {
             Unmarshaller unmarshaller = context.createUnmarshaller();
 
             if (inputStream == null) {
-                System.out.println("acho n patrao");
+                throw new RuntimeException("Arquivo não encontrado!");
             }
 
             return  (NfeJAXBModel) unmarshaller.unmarshal(inputStream);

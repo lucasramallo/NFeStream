@@ -1,7 +1,7 @@
 package com.github.lucasramallo.nfestream.core.mappers;
 
-import com.github.lucasramallo.nfestream.core.model.Imposto;
-import com.github.lucasramallo.nfestream.core.model.NfeJAXBModel;
+import com.github.lucasramallo.nfestream.core.entity.Imposto;
+import com.github.lucasramallo.nfestream.core.entity.NfeJAXBModel;
 import com.github.lucasramallo.nfestream.core.util.EnumMatcher;
 import com.github.lucasramallo.nfestream.core.util.ImpostoTypes;
 import com.github.lucasramallo.nfestream.core.util.ImpostoValoresTags;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * permitindo a adaptação de diferentes estruturas de dados sem a necessidade de definir explicitamente os campos.
  * </p>
  */
-public abstract class JaxbToImposto implements JaxbToModel {
+public abstract class JaxbToImposto{
     private static ArrayList<Imposto> impostos;
     private static Imposto imposto;
 
@@ -32,8 +32,7 @@ public abstract class JaxbToImposto implements JaxbToModel {
 
         return impostos;
     }
-
-    // Método recursivo para imprimir os campos e valores de objetos
+    
     private static void mapFields(Object obj, int indentLevel) {
         if (obj == null || isSystemClass(obj.getClass())) {
             return;

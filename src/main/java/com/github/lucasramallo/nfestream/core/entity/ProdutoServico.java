@@ -1,4 +1,4 @@
-package com.github.lucasramallo.nfestream.core.model;
+package com.github.lucasramallo.nfestream.core.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

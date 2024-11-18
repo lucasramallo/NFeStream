@@ -6,7 +6,7 @@
 //
 
 
-package com.github.lucasramallo.nfestream.core.model;
+package com.github.lucasramallo.nfestream.core.entity;
 
 import lombok.Data;
 
