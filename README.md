@@ -4,6 +4,9 @@
 
 Este projeto é um sistema para gestão de notas fiscais eletrônicas (NF-e), permitindo o armazenamento e a consulta de informações relacionadas a notas fiscais, emitentes, destinatários, produtos/serviços, impostos e transporte. O sistema foi desenvolvido para fins de estudo e prática.
 
+## Techs utilizadas
+  [![My Skills](https://skillicons.dev/icons?i=java,spring,postgres,mongodb,docker&theme=dark)](https://skillicons.dev)
+
 ## Estrutura do Projeto
 
 - **`docs/`**: Pasta contendo a documentação do projeto.
@@ -17,9 +20,6 @@ Este projeto é um sistema para gestão de notas fiscais eletrônicas (NF-e), pe
 - Gerenciamento de informações sobre emitentes e destinatários.
 - Controle dos impostos aplicados e dados de transporte da mercadoria.
 - 
-## Tecnologias Utilizadas
+## Modelagem de dados
 
-- **PostgreSQL**
-- **Docker**
-- **Spring Boot**
-
+![NfeStream_2024-11-18T00_56_49 967Z](https://github.com/user-attachments/assets/bbb23c57-3995-4344-9ab2-9e82214058cd)
