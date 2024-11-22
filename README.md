@@ -22,4 +22,4 @@ Este projeto é um sistema para gestão de notas fiscais eletrônicas (NF-e), pe
 - 
 ## Modelagem de dados
 
-![NfeStream_2024-11-18T00_56_49 967Z](https://github.com/user-attachments/assets/bbb23c57-3995-4344-9ab2-9e82214058cd)
+![NfeStream_2024-11-22T11_22_19 653Z](https://github.com/user-attachments/assets/6d13f49d-3960-428a-8e60-a91b233709a7)
