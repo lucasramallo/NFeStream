@@ -25,6 +25,6 @@ public class Imposto {
     private BigDecimal valor;
 
     @ManyToOne
-    @JoinColumn(name = "nfe_id", nullable = false)
+    @JoinColumn(name = "nfe_id", referencedColumnName = "id", nullable = false)
     private Nfe nfe;
 }

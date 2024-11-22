@@ -23,9 +23,9 @@ public class ItemNfe {
     @JoinColumn(name = "nfe_id", nullable = false)
     private Nfe nfe;
 
-    @OneToMany
-    @JoinColumn(name = "produto_servico_id")
-    private ArrayList<ProdutoServico> produtoServico;
+    @OneToOne
+    @JoinColumn(name = "produto_servico_id", referencedColumnName = "id")
+    private ProdutoServico produtoServico;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal quantidade;

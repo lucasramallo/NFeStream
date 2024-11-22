@@ -2,7 +2,7 @@ package com.github.lucasramallo.nfestream;
 
 import com.github.lucasramallo.nfestream.core.mappers.JaxbToImposto;
 import com.github.lucasramallo.nfestream.core.entity.Imposto;
-import com.github.lucasramallo.nfestream.core.entity.NfeJAXBModel;
+import com.github.lucasramallo.nfestream.core.model.NfeJAXBModel;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

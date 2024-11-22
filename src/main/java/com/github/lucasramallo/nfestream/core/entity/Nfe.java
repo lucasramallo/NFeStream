@@ -40,15 +40,15 @@ public class Nfe {
     private BigDecimal valorTotal;
 
     @OneToOne
-    @JoinColumn(name = "emitente_id", nullable = false)
+    @JoinColumn(name = "emitente_id", referencedColumnName = "id")
     private Emitente emitente;
 
     @OneToOne
-    @JoinColumn(name = "destinatario_id", nullable = false)
+    @JoinColumn(name = "destinatario_id", referencedColumnName = "id")
     private Destinatario destinatario;
 
     @OneToOne
-    @JoinColumn(name = "transporte_id", nullable = false)
+    @JoinColumn(name = "transporte_id", referencedColumnName = "id")
     private Transporte transporte;
 
     @Column(length = 255)
