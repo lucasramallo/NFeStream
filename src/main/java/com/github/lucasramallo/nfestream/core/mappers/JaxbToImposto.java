@@ -1,6 +1,6 @@
 package com.github.lucasramallo.nfestream.core.mappers;
 
-import com.github.lucasramallo.nfestream.core.entity.Imposto;
+import com.github.lucasramallo.nfestream.core.domain.Imposto;
 import com.github.lucasramallo.nfestream.core.model.NfeJAXBModel;
 import com.github.lucasramallo.nfestream.core.util.EnumMatcher;
 import com.github.lucasramallo.nfestream.core.util.ImpostoTypes;

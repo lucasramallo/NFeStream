@@ -1,7 +1,9 @@
 package com.github.lucasramallo.nfestream.core.service;
 
+import com.github.lucasramallo.nfestream.core.domain.Emitente;
+import com.github.lucasramallo.nfestream.core.domain.Transporte;
 import com.github.lucasramallo.nfestream.core.mappers.JaxbToImposto;
-import com.github.lucasramallo.nfestream.core.entity.Imposto;
+import com.github.lucasramallo.nfestream.core.domain.Imposto;
 import com.github.lucasramallo.nfestream.core.model.NfeJAXBModel;
 
 import javax.xml.bind.JAXBContext;
@@ -19,6 +21,12 @@ public class NfeService {
 
         NfeJAXBModel nfeModel = convertXmlToModel(inputStream);
         ArrayList<Imposto> impostos = JaxbToImposto.execute(nfeModel.getInfNFe().getDet().getImposto());
+
+        Emitente emitente = new Emitente();
+        emitente.nfeModelToEntity(nfeModel);
+
+        Transporte transporte = new Transporte();
+        transporte.nfeModelToEntity(nfeModel);
     }
 
     private NfeJAXBModel convertXmlToModel(InputStream inputStream) {

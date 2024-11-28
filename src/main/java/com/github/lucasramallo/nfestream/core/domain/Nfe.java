@@ -1,4 +1,4 @@
-package com.github.lucasramallo.nfestream.core.entity;
+package com.github.lucasramallo.nfestream.core.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

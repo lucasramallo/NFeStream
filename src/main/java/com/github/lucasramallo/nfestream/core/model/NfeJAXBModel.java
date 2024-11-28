@@ -3827,6 +3827,17 @@ public class NfeJAXBModel {
             protected String cnae;
             @XmlElement(name = "CRT", required = true)
             protected String crt;
+            @XmlElement(name = "fone", required = true)
+            protected String fone;
+            @XmlElement(name = "email", required = true)
+            protected String email;
+
+            public String getFone() {
+                return fone;
+            }
+            public String getEmail() {
+                return email;
+            }
 
             /**
              * Obtém o valor da propriedade cnpj.
@@ -5696,6 +5707,9 @@ public class NfeJAXBModel {
                 @XmlElement(required = true)
                 protected String xNome;
 
+                @XmlElement(required = true)
+                protected String CNPJ;
+
                 /**
                  * Obtém o valor da propriedade xNome.
                  *
@@ -5706,6 +5720,9 @@ public class NfeJAXBModel {
                  */
                 public String getXNome() {
                     return xNome;
+                }
+                public String getCNPJ() {
+                    return CNPJ;
                 }
 
                 /**

@@ -24,6 +24,8 @@
             <CNPJ>58716523000119</CNPJ>
             <xNome>FIMATEC TEXTIL LTDA</xNome>
             <xFant>FIMATEC</xFant>
+            <fone>1120677300</fone>
+            <email>contato@fimatec.com.br</email>
             <enderEmit>
                 <xLgr>RUA DOS PATRIOTAS</xLgr>
                 <nro>897</nro>
@@ -137,6 +139,7 @@
             <modFrete>1</modFrete>
             <transporta>
                 <xNome>RETIRA</xNome>
+                <CNPJ>12345678000195</CNPJ>
             </transporta>
             <vol>
                 <qVol>3</qVol>

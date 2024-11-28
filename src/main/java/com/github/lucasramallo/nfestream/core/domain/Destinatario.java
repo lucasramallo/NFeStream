@@ -1,5 +1,7 @@
-package com.github.lucasramallo.nfestream.core.entity;
+package com.github.lucasramallo.nfestream.core.domain;
 
+import com.github.lucasramallo.nfestream.core.domain.interfaces.Domain;
+import com.github.lucasramallo.nfestream.core.model.NfeJAXBModel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -7,7 +9,7 @@ import lombok.*;
 @Table(name = "destinatario")
 @Data
 @NoArgsConstructor
-public class Destinatario {
+public class Destinatario implements Domain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,4 +29,9 @@ public class Destinatario {
 
     @Column(length = 255)
     private String email;
+
+    @Override
+    public void nfeModelToEntity(NfeJAXBModel nfeModel) {
+        // todo
+    }
 }

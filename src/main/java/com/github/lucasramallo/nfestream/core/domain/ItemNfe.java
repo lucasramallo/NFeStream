@@ -1,4 +1,4 @@
-package com.github.lucasramallo.nfestream.core.entity;
+package com.github.lucasramallo.nfestream.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 
 @Entity
 @Table(name = "item_nfe")
