@@ -19,7 +19,8 @@ Este projeto é um sistema para gestão de notas fiscais eletrônicas (NF-e), pe
 - Registro de itens incluídos nas notas fiscais.
 - Gerenciamento de informações sobre emitentes e destinatários.
 - Controle dos impostos aplicados e dados de transporte da mercadoria.
-- 
+  
 ## Modelagem de dados
 
-![NfeStream_2024-11-22T11_22_19 653Z](https://github.com/user-attachments/assets/6d13f49d-3960-428a-8e60-a91b233709a7)
+
+![Untitled Diagram_2024-11-28T11_35_36 360Z](https://github.com/user-attachments/assets/1689c6a2-6a9f-4528-9398-0976aea72fc5)
